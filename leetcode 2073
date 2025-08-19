@@ -1,0 +1,24 @@
+//leetcode 2073
+
+int timeRequiredToBuy(int* tickets, int ticketsSize, int k) {
+    int front = 0 ;
+    int rear = ticketsSize - 1 ;
+    int time = 0 ;
+    int k_ptr = k ;
+    while(tickets[k] != 0){
+        if(front==ticketsSize){
+            front = 0 ;
+        }
+        if( tickets[front] != 0){
+            tickets[front] = tickets[front] - 1;
+        }
+        
+        if(tickets[front] == 0){
+            ticketsSize--;
+        }
+        time++;
+        rear = front ;
+        front++;
+    }
+    return time ;
+}
