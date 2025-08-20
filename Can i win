@@ -1,0 +1,10 @@
+bool canIWin(int maxChoosableInteger, int desiredTotal) {
+    if ( (desiredTotal % maxChoosableInteger) % 2 == 0 || desiredTotal <= maxChoosableInteger){
+        return true ;
+    }
+    else{
+        return false ; 
+    }
+}
+
+// failed . 
